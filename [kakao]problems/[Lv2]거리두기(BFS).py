@@ -41,3 +41,4 @@ for room in places:
     answer.append(bfs(room))
 
 print(answer)
+
