@@ -49,4 +49,3 @@ places = [["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"], ["POOPX", "OXPXP", "PXX
 
 
 print(solution(places))
-
