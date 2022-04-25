@@ -68,7 +68,22 @@ function fibonacci(n) {
 
 ### 📌queue, stack
 
-### 📌Hash table
+### 📌Hashing
+![](https://velog.velcdn.com/images/crosstar1228/post/dcaae2fd-fbf2-4208-89da-2843cedd38f5/image.png)
+[https://en.wikipedia.org/wiki/Hash_function]
+- **key** 값들이 **hash table**의 각 값에 **mapping** 됨
+- 이러한 mapping은 `hash function` 에 의함
+- hash table의 각 칸들을 hash bucket이라고 함
+![](https://velog.velcdn.com/images/crosstar1228/post/dc132943-90ce-4bdc-9ee3-ed2f2a9a498e/image.png)
+[https://medium.com/@songjaeyoung92/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-javascript-hash-table-%EC%9D%B4%EB%9E%80-5f5345623dab]
+- 같은 value(hash bucket)에 mapping될 경우, 이를 collision(충돌)이라고 함. 하나의 경우 bucket을 연달아 저장하는 방법이 있음
+
+
+> 구현 및 코딩?🤔
+- python의 dictionary 자료형을 이용하면 각 key와 value값을 상수시간(O(n))에 접근 가능
+- value의 자료형에 따라 defaultdict를 활용하면 직관적인(짧은)코딩 가능
+- value 얻을 때 indexing`[index]`보다는 `dict.get` 메소드를 쓰는것이 에러를 방지 (예외처리 용이)
+
 
 ### 📌Tree
 
@@ -177,9 +192,9 @@ print(x)
 ![](https://images.velog.io/images/crosstar1228/post/596da6d7-8d03-4ee5-8067-bd4f8664e432/sorting_timecomplexity.png)
 
 
-## Algorithm
-### recursive algorithm
-### dynamic programming
+## Algorithm💪
+### 📌recursive algorithm
+### 📌dynamic programming
 ---
 > 유념할 점😎
 최솟값을 구하려면 맨 처음에는 최대 값을 골라서 설정해주고 비교해나가면서 설정해주는 방식이 좋다.
@@ -246,9 +261,16 @@ fibonacci_dp(8)
 - 여기서는 memoization table로 dictionary 자료구조를 이용했다.
 
 
-### greedy
+### 📌greedy
+- 단계별로 **현 상황에서의 최적해**를 선택.
 
-### BFS, DFS
+> 언제 적용해야 하나?
+- 최종해의 최적성에 영향을 미치지 않는다는 확신이 있어야 함. 
+
+
+
+
+### 📌BFS, DFS
 - 공통적으로 경로 찾기 문제에 적합.
 - BFS : queue로 구현
     - 최단경로에 적합
